@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+    
+    <ul id="todo-list">
+        <!-- Your todo items will be added here dynamically -->
+    </ul>
+    
+    <script>
+        // Create an empty array to store the todo items
+        let todoList = [];
+
+        // Function to add a new todo item
+        function addTodoItem(item) {
+            todoList.push(item);
+            displayTodoList();
+        }
+
+        // Function to remove a todo item
+        function removeTodoItem(item) {
+            const index = todoList.indexOf(item);
+            if (index > -1) {
+                todoList.splice(index, 1);
+                displayTodoList();
+            }
+        }
+
+        // Function to display the todo list
+        function displayTodoList() {
+            const todoListElement = document.getElementById("todo-list");
+            todoListElement.innerHTML = ""; // Clear the list
+
+            console.log("Todo List:");
+            for (let i = 0; i < todoList.length; i++) {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${i + 1}. ${todoList[i]}`;
+                todoListElement.appendChild(listItem);
+            }
+        }
+
+        // Usage example:
+        addTodoItem("Buy groceries");
+        addTodoItem("Finish homework");
+        addTodoItem("Go for a run");
+        removeTodoItem("Finish homework");
+    </script>
+</body>
+</html>
