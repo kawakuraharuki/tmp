@@ -21,5 +21,6 @@ B.greet()
 B.goodbye()
 
 ##aaaaaaaaa
+#1111111
 
 // バージョン管理します
