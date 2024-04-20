@@ -20,6 +20,6 @@ B = Greeting("Bob", "rainy", 7)
 B.greet()
 B.goodbye()
 
-
+##aaaaaaaaa
 
 // バージョン管理します
